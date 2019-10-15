@@ -1,0 +1,17 @@
+{
+  "header": {
+      "welcome_text": "Hello, my name is Nikita Akulich and I am",
+      "main": "FRONTEND WEB DEVELOPER",
+      "about": "creating modernd and responsive web aplications."
+  },
+  "skils": {
+    "text": "My skils is js."
+  },
+  "personal": {
+    "text": "At the moment I study at BSUIR and work on freelance for about a year. I have been engaged in web development for a long time, constantly striving to develop and learn something new. I am not afraid of difficulties and ready to solve problems of any complexity.",
+    "phone": "Phone",
+    "social": "Social",
+    "adress_label": "Adress",
+    "adress": "Belarus, Minsk, Kedishko street 10A"
+  }
+}
