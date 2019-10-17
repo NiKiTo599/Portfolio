@@ -9,6 +9,7 @@ import ChangeLanguage from "./ChangeLanguage";
 import Skils from "./Skils";
 import Header from "./Header";
 import PersonalInfo from "./PersonalInfo";
+import ThisWhatIDo from "./ThisWhatIDo";
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class App extends Component {
         <ChangeLanguage i18n={i18n} />
         <section className="container">
           <PersonalInfo t={t}/>
+          <ThisWhatIDo />
         </section>
       </>
     );
