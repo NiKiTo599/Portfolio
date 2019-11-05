@@ -1,0 +1,39 @@
+{
+  "works": [
+    {
+      "type": "com",
+      "name": "SpecStroy298",
+      "date": "September, 2019",
+      "img": "SpecStroy298.png",
+      "link": "http://s-stroy298.com"
+    },
+    {
+      "type": "own",
+      "name": "Culture Portal",
+      "date": "August, 2019",
+      "img": "CulturePortal.png",
+      "link": "https://naughty-bassi-c86f12.netlify.com/ru/"
+    },
+    {
+      "type": "own",
+      "name": "Piskel Clone",
+      "date": "June, 2019",
+      "img": "PiskelClone.png",
+      "link": "https://nikito599.github.io/piskel-clone/"
+    },
+    {
+      "type": "own",
+      "name": "Calculator",
+      "date": "October, 2019",
+      "img": "Calculator.png",
+      "link": "https://nikito599.github.io/piskel-clone/"
+    },
+    {
+      "type": "own",
+      "name": "Markdown Previewer",
+      "date": "October, 2019",
+      "img": "MarkdownPreviver.png",
+      "link": "https://nikito599.github.io/markdownPreviewer/"
+    }
+  ]
+}

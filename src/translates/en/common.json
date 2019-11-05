@@ -4,8 +4,19 @@
       "main": "FRONTEND WEB DEVELOPER",
       "about": "creating modernd and responsive web aplications."
   },
+  "titles": {
+    "about": "About me",
+    "whatIdo": "This is what I do",
+    "skils": "Skils",
+    "myworks": "My works",
+    "drop": "Drop me a line"
+  },
   "skils": {
-    "text": "My skils is js."
+    "text": "I am inspired by creating great work with people who are as passionate as I am about building something awesome.",
+    "text1": "HTML, CSS, SASS, React, Bootstrap, Gatsby.js,",
+    "text2": "Photoshop, Illustrator, XMind, Prototyping, Wireframing, User Research, Usability Testing.",
+    "text3": "Screaming Frog, Google Analytics, CrazyEgg.",
+    "text4": "Javascript, Node.js, MongoDB, GraphQL, Visual Studio Code."
   },
   "personal": {
     "text": "At the moment I study at BSUIR and work on freelance for about a year. I have been engaged in web development for a long time, constantly striving to develop and learn something new. I am not afraid of difficulties and ready to solve problems of any complexity.",
@@ -13,5 +24,22 @@
     "social": "Social",
     "adress_label": "Adress",
     "adress": "Belarus, Minsk, Kedishko street 10A"
+  },
+  "items": {
+    "name1": "Web Design",
+    "text1": "Developing web interfaces for sites or web applications.",
+    "name2": "Web Programing",
+    "text2": "Developing web sites and web applications(UI/UX Design).",
+    "text": "I am a Junior Frontend Developer with enough experience."
+  },
+  "form": {
+    "name-label": "Name",
+    "name-placeholder": "Enter your name",
+    "email-label": "Email adress",
+    "text-muted": "I'll never share your email with anyone else.",
+    "email-placeholder": "Enter email adress",
+    "message-label": "Message",
+    "message-placeholder": "Enter your message",
+    "submit": "Submit"
   }
 }

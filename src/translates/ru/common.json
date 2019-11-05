@@ -4,8 +4,19 @@
     "main": "FRONTEND WEB DEVELOPER",
     "about": "создаю современные и адаптивные веб-приложения."
 },
+"titles": {
+  "about": "Обо мне",
+  "whatIdo": "Это то, чем я занимаюсь",
+  "skils": "Навыки",
+  "myworks": "Мои работы",
+  "drop": "Напишите мне"
+},
   "skils": {
-    "text": "Мои скилы это."
+    "text": "Я вдохновлен созданием отличной работы с людьми, которые так же страстно, как и я, создают нечто потрясающее.",
+    "text1": "HTML, CSS, SASS, React, Bootstrap, Gatsby.js,",
+    "text2": "Photoshop, Illustrator, XMind, Prototyping, Wireframing, User Research, Usability Testing.",
+    "text3": "Screaming Frog, Google Analytics, CrazyEgg.",
+    "text4": "Javascript, Node.js, MongoDB, GraphQL, Visual Studio Code."
   },
   "personal": {
     "text": "На данный момент я учусь в БГУИР и работаю на фрилансе около года. Я занимаюсь веб разработкой уже достаточно давно, постоянно стремлюсь развиваться и узнавать что-то новое. Не боюсь трудностей и готов решать задачи любой сложности.",
@@ -13,5 +24,22 @@
     "social": "Социальные сети",
     "adress_label": "Адрес",
     "adress": "Беларусь, Минск, ул. Кедышко 10А"
+  },
+  "items": {
+    "name1": "Веб-дизайн",
+    "text1": "Разрабатываю веб-интерфейсы для сайтов или веб-приложений.",
+    "name2": "Веб-программирование",
+    "text2": "Разрабатываю веб-сайты и веб приложения(UI/UX дизайн).",
+    "text": "Я Junior Frontend Developer с достаточно большим опытом."
+  },
+  "form": {
+    "name-label": "Имя",
+    "name-placeholder": "Введите ваше имя",
+    "text-muted": "Я не сообщу ваш email кому-то ещё.",
+    "email-label": "Email адрес",
+    "email-placeholder": "Введите email адрес",
+    "message-label": "Сообщение",
+    "message-placeholder": "Введите ваше сообщение",
+    "submit": "Отправить"
   }
 }
