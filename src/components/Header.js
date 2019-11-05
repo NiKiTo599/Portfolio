@@ -4,6 +4,7 @@ export default class Header extends React.Component {
   render() {
     const { t } = this.props;
     return (
+      <>
       <section className="container-header">
         <p>
           <span className="container-header__second-text">{t("header.welcome_text")}</span>
@@ -15,6 +16,8 @@ export default class Header extends React.Component {
           <span className="container-header__second-text">{t("header.about")}</span>
         </p>
       </section>
+      <section className="blue"></section>
+      </>
     );
   }
 }
