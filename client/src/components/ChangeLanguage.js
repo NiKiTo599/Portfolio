@@ -17,8 +17,8 @@ export default class ChangeLanguage extends React.Component {
   render() {
     return (
       <div className="container-change_language">
-        <button className={this.en} onClick={this.changeLang.bind(this, 'en')}>en</button>
-        <button className={this.ru} onClick={this.changeLang.bind(this, 'ru')}>ru</button>
+        <button className={`fadeInLeft wow ${this.en}`} onClick={this.changeLang.bind(this, 'en')}>en</button>
+        <button className={`fadeInRight wow ${this.ru}`} onClick={this.changeLang.bind(this, 'ru')}>ru</button>
       </div>
     );
   }

@@ -6,12 +6,12 @@ export default class PersonalInfo extends React.Component {
   render() {
     const { t } = this.props;
     return (
-      <div className="row align-items-center">
-        <div className="col-xl-2">
+      <div className="row align-items-center wow fadeInUp">
+        <div className="col-xl-1">
           <Svg heightForSvg="572"/>
         </div>
         <div className="col-xl-10 personal_container">
-          <div className="container-personal__left">
+          <div className="container-personal__left fadeIn wow">
             <p className="left__main-text">{t("personal.text")}</p>
             <ul className="left__list-contacts">
               <li>
@@ -28,13 +28,16 @@ export default class PersonalInfo extends React.Component {
               </li>
             </ul>
             <div className="left__buttons">
-              <Button variant="primary">contact me</Button>
-              <Button variant="secondary">download CV</Button>
+              <Button className='heartBeat wow' data-wow-delay="0.5s" variant="primary">{t("personal.contactme")}</Button>
+              <Button className='heartBeat wow' data-wow-delay="0.5s" variant="secondary">{t("personal.download")}</Button>
             </div>
           </div>
-          <div className="container-personal__right">
+          <div className="container-personal__right fadeIn wow">
             <img src={require('../data/images/foto1.JPG')} alt="my personal foto"/>
           </div>
+        </div>
+        <div className="col-xl-1">
+          <Svg heightForSvg="572"/>
         </div>
       </div>
     );

@@ -1,0 +1,51 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+
+const app = express();
+const port = process.env.PORT || 5000;
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get('/api/hello', (req, res) => {
+  res.send({ express: 'Hello From Express' });
+});
+
+app.post('/api/world', (req, res) => {
+  console.log(req.body);
+  nodemailer.createTestAccount((err, acount) => {
+    /* let transporter = nodemailer
+      .createTransport('smtps://akulichnikita0@gmail.com:Nik35985@smtp.gmail.com/?pool=true'); */
+     let transporter = nodemailer.createTransport({
+        pool: true,
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true, // use TLS
+        auth: {
+          user: "akulichnikita0@gmail.com",
+          pass: "Nik35985"
+        }
+      });
+      /* let transporter = nodemailer.createTransport({
+        sendmail: true,
+        newline: 'windows',
+        logger: false
+    }); */
+    let mailOptitions = {
+      from: "Portfolio <akulichnikita0@gmail.com>",
+      to: "akulich.nikita@mail.ru",
+      subject: 'Contact with me',
+      text: `${req.body.post}`,
+      html: `<h1>${req.body.post.name}</h1><h2>${req.body.post.email}</h2><p>${req.body.post.message}</p>`
+    }
+    transporter.sendMail(mailOptitions, (error, info) => {
+      if (error) { console.log(error)}
+    });
+  })
+  res.send(
+    `I received your POST request. This is what you sent me: ${req.body.post.name}`,
+  );
+});
+
+app.listen(port, () => console.log(`Listening on port ${port}`));

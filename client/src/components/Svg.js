@@ -11,14 +11,13 @@ function points(height, beg) {
     };
     result += `${x},${i} `;
   }
-  console.log(result)
   return result;
 }
 
 points(572, 0)
 
 const Svg = (props) => (
-  <svg width="90" height={`${props.heightForSvg}`}>
+  <svg className='heartBeat wow' width='90' height={`${props.heightForSvg}`}>
     <polyline
       stroke="#0D2240"
       fill="none"

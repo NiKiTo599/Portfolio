@@ -1,0 +1,475 @@
+/* @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700&display=swap&subset=cyrillic'); */
+@import url('https://fonts.googleapis.com/css?family=Tomorrow:400,800i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kelly+Slab&display=swap&subset=cyrillic');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
+$primary: #307CE6;
+$yellow: #C2B400;
+$blue: #0D2240;
+$font: 'Tomorrow', 'Kelly Slab', sans-serif;
+$font1: 'Yanone Kaffeesatz', 'Kelly Slab', sans-serif;
+
+@keyframes scroll {
+  0% {
+    opacity: .5;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    align-self: center;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    align-self: flex-end;
+    opacity: 0.5;
+  }
+}
+@keyframes openUp {
+  50% {
+    bottom: 75%;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+@keyframes openDown {
+  50% {
+    top: 75%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+#primary {
+  background-color: $primary!important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: $font !important;
+  color: #00007A !important;
+}
+.container_for_container {
+  background: rgb(0,0,199);
+  background: linear-gradient(0deg, rgba(0,0,199,0.08167016806722693) 0%, rgba(9,9,121,0.08727240896358546) 22%, rgba(49,168,193,0.0760679271708683) 64%);
+}
+.btn-primary {
+  background-color: #C2B400 !important;
+  border-color: #C2B400 !important;
+}
+
+.btn-secondary {
+  background-color: #A0BFC5 !important;
+  border-color: #A0BFC5 !important;
+}
+// First section(Header)
+.blue {
+  background-color: rgba(0, 0, 255, 0.384);
+  position: absolute;
+  width: 99vw;
+  height: 100vh;
+  top: 0;
+}
+.container-header {
+  background-image: url('../data/images/main_fon.png');
+  background-repeat: no-repeat;
+  background-size: 100% 1140px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin: 0;
+    text-align: center;
+    color: #C2B400;
+    z-index: 5;
+    .container-header__main-text {
+      font-size: 6rem;
+      font-weight: 700;
+      animation-duration: 1.5s;
+    }
+    .container-header__second-text {
+      font-size: 2rem;
+      font-weight: 400;
+      animation-delay: 1s;
+    }
+  }
+  .transition-container-down {
+    z-index: 10;
+    position: absolute;
+    left: calc(50% - 2rem);
+    top: 85%;
+    .transition-container__circle {
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+      border: 2px solid #C2B400;
+      color: #C2B400;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        text-decoration: none !important;
+      animation-name: scroll;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      }
+    }
+  }
+  .transition-container-up {
+    z-index: 10;
+    position: fixed;
+    left: calc(90% - 2rem);
+    top: calc(95% - 2rem);
+    opacity: 0;
+    .transition-container__square {
+      width: 3rem;
+      height: 3rem;
+      border-radius: .5rem;
+      border: 2px solid #C2B400;
+      color: #C2B400;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        text-decoration: none !important;
+      animation-name: scroll;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      }
+    }
+  }
+}
+// Change language
+.container-change_language {
+  position: fixed;
+  bottom: 80%;
+  left: 90%;
+  z-index: 2000;
+  .container-change_language__button {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(124, 121, 121, 0.432);
+    outline: none;
+    border: none;
+    font-family: $font;
+    font-size: 1.1rem;
+    color: white;
+  }
+  .container-change_language__button__active {
+    background-color: #C2B400;
+    color: white;
+  }
+}
+
+.container__title {
+  text-align: center;
+  font-family: $font;
+  font-weight: 700;
+  font-size: 5rem;
+  padding-top: 5rem;
+  margin-bottom: 3rem;
+  border-bottom: 5px solid #00007A;
+}
+// Navigate
+.navbar {
+  padding: 0 1rem !important;
+}
+.navbar-expand {
+  justify-content: center !important;
+}
+
+.mr-auto, .mx-auto {
+  margin-right: 0 !important;
+}
+
+.navbar-nav {
+  width: 40%;
+  justify-content: space-between;
+}
+
+.nav-link {
+  color: $yellow !important;
+  font-size: 1.5rem;
+}
+.nav-link__active {
+  color: #0D2240 !important;
+  font-weight: 800;
+}
+.nav-link:hover {
+  font-weight: 800;
+}
+.navbar-brand {
+  font-size: 2rem !important;
+  color: $primary !important;
+  line-height: 2rem;
+  font-weight: 800;
+  position: relative;
+  padding: 2rem;
+  
+  span {
+    color: #0D2240;
+  }
+}
+.navbar-brand::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -1;
+  background: $yellow;
+  transform: skew(-45deg);
+  -webkit-box-shadow: 2px 0px 13px 2px rgba(194,180,0,0.7); 
+  box-shadow: 2px 0px 13px 2px rgba(194,180,0,0.7);
+}
+
+// Personal 
+.personal_container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  .container-personal__left {
+    width: 50%;
+    .left__main-text {
+      font-family: $font;
+      font-size: 1.3rem;
+      text-align: justify;
+      text-indent: 1.2rem;
+    }
+    .left__list-contacts {
+      font-family: $font;
+      list-style: none;
+      margin: 0;
+      padding-inline-start: 0;
+      li {
+        font-size: 1.1rem;
+        span {
+          font-size: 1.3rem;
+          font-weight: 700;
+        }
+      }
+    }
+    .left__buttons {
+      margin-top: 2rem;
+      button {
+        margin-right: 2rem;
+        width: 11rem !important;
+        height: 3.5rem;
+        font-family: $font !important;
+        font-size: 1.3rem; 
+      }
+    }
+  }
+  .container-personal__right {
+    width: 45%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// What I do
+
+.what_i_do-container {
+  font-family: $font;
+  display: flex;
+  justify-content: center;
+  .what_i_do-container__container_for_items {
+    height: 100%;
+    width: 75%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    .container_for_items__item {
+      width: 20rem;
+      height: 20rem;
+      border: 10px double #307CE6;
+      background-color: rgba(194, 181, 0, 0.363);
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      text-align: center;
+      h4 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+      }
+      p {
+        font-size: 1.5rem;
+        width: 17rem;
+        text-align: center; 
+      }
+    }
+    .container_for_items__paragraph {
+      align-self: center;
+      font-size: 2rem;
+      font-weight: 700;
+      background-color: rgba(194, 181, 0, 0.363);
+      border: 10px double #307CE6;
+      text-align: center;
+      border-radius: 15px;
+      padding: 15px;
+      width: 100%;
+      margin: 1.5rem 0;
+    }
+    .container_for_items__item__blue {
+      background-color: #307CE6;
+      border: 10px double rgba(194, 181, 0, 1);
+      position: relative;
+      overflow: hidden;
+
+      .go-to-down {
+        background-color: #307CE6;
+        width: 100%;
+        height: 50%;
+        z-index: 10;
+        top: 50%;
+        position: absolute;
+      }
+      .go-to-up {
+        background-color: #307CE6;
+        width: 100%;
+        height: 50%;
+        z-index: 10;
+        position: absolute;
+        bottom: 50%;
+        overflow: hidden;
+      }
+    }
+    .container_for_items__item__blue:hover {
+      .go-to-down {
+        animation-name: openDown;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      }
+      .go-to-up {
+        animation-name: openUp;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      }
+    }
+    .align-self {
+      align-self: flex-end;
+    }
+  }
+}
+
+// Skils
+.skils-container {
+  font-family: $font;
+  display: flex;
+  justify-content: center;
+  .skils-container__container_for_items {
+    height: 100%;
+    width: 75%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    .container_for_items__item {
+      width: 20rem;
+      height: 20rem;
+      background-color: rgba(194, 181, 0, 0.363);
+      border: 10px double #307CE6;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      h4 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+      }
+      p {
+        font-size: 1.5rem;
+        width: 17rem;
+        text-align: center; 
+      }
+    }
+    .container_for_items__paragraph {
+      align-self: center;
+      font-size: 2rem;
+      font-weight: 700;
+      background-color: rgba(194, 181, 0, 0.363);
+      border-radius: 15px;
+      padding: 15px;
+      margin: 1.5rem 0;
+    }
+    .container_for_items__item__blue {
+      background-color: #307CE6;
+      border: 10px double rgba(194, 181, 0, 1);
+    }
+    .align-self {
+      align-self: flex-end;
+    }
+  }
+}
+
+// Works
+.my_works__item {
+  img {
+    width: 32rem;
+    height: auto;
+  }
+}
+.my_works__list {
+  list-style: none;
+  display: flex;
+  .list__item {
+    margin-right: 2rem;
+    font-size: 1.6rem;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .list__item__active {
+    border-radius: 10px;
+    background-color: rgba(194, 181, 0, 0.363);;
+  }
+}
+
+// Drop me a line
+.form-group {
+  display: flex;
+  justify-content: center;
+}
+.form-control {
+  width: 25vw !important;
+}
+
+form {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-bottom: 5rem;
+  .btn {
+    width: 25vw !important;
+  }
+}
+
+// Footer
+.container__footer {
+  width: 100%;
+  height: 10vh;
+  background-color: $blue;
+}

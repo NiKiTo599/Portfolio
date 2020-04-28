@@ -23,7 +23,9 @@
     "phone": "Phone",
     "social": "Social",
     "adress_label": "Adress",
-    "adress": "Belarus, Minsk, Kedishko street 10A"
+    "adress": "Belarus, Minsk, Kedishko street 10A",
+    "contactme": "contact me",
+    "download": "download CV"
   },
   "items": {
     "name1": "Web Design",
@@ -40,6 +42,6 @@
     "email-placeholder": "Enter email adress",
     "message-label": "Message",
     "message-placeholder": "Enter your message",
-    "submit": "Submit"
+    "submit": "SEND MESSAGES"
   }
 }
