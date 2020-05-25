@@ -8,8 +8,9 @@
       "link": "http://s-stroy298.com",
       "customer": "ООО СпецСтрой298",
       "stack": [
-        "Gatsby", "React", "Bootstrap", "Jquery", "Express", "NodeMailer"
-      ]
+        "Gatsby", "React", "Bootstrap", "Express", "NodeMailer", "SASS"
+      ],
+      "description": "It's wweb site for russian build company. It was neened some pages and for it I used Gatsby.js. On this project I finished learn this technology. Also I had to create a simple server for sending email with a heilp of NodeMailer API. So it was my first commercial project. I was known a lot of different things which important for my work by this project."
     },
     {
       "type": "own",
@@ -17,7 +18,11 @@
       "date": "August, 2019",
       "img": "CulturePortal.png",
       "link": "https://naughty-bassi-c86f12.netlify.com/ru/",
-      "customer": "Rolling Scopes School"
+      "customer": "Rolling Scopes School",
+      "stack": [
+        "Gatsby", "React", "Bootstrap", "SASS"
+      ],
+      "description": ""
     },
     {
       "type": "own",
@@ -25,7 +30,11 @@
       "date": "June, 2019",
       "img": "PiskelClone.png",
       "link": "https://nikito599.github.io/piskel-clone/",
-      "customer": "Rolling Scopes School"
+      "customer": "Rolling Scopes School",
+      "stack": [
+        "Vanil javascript"
+      ],
+      "description": ""
     },
     {
       "type": "own",
@@ -33,7 +42,11 @@
       "date": "October, 2019",
       "img": "Calculator.png",
       "link": "https://nikito599.github.io/piskel-clone/",
-      "customer": "FreeCodeCamp.org"
+      "customer": "FreeCodeCamp.org",
+      "stack": [
+        "React", "Bootstrap", "Jquery"
+      ],
+      "description": ""
     },
     {
       "type": "own",
@@ -41,7 +54,11 @@
       "date": "October, 2019",
       "img": "MarkdownPreviver.png",
       "link": "https://nikito599.github.io/markdownPreviewer/",
-      "customer": "FreeCodeCamp.org"
+      "customer": "FreeCodeCamp.org",
+      "stack": [
+        "React", "Bootstrap", "Jquery"
+      ],
+      "description": ""
     }
   ]
 }

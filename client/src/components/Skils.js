@@ -16,18 +16,22 @@ export default class Skils extends React.Component {
   }
 
   render() {
-    const { t } = this.props;
+    const { t, width } = this.props;
     return (
       <div className="row align-items-center">
-        <div className="col-xl-1">
-          <Svg heightForSvg={this.state.height}/>
-        </div>
-        <div className="col-xl-10 skils-container">
+        {width >= 1210 ? (
+          <div className="col-xl-1">
+            <Svg heightForSvg={this.state.height} />
+          </div>
+        ) : null}
+        <div className="col-xl-10 col-lg-12 skils-container">
           <Items t={t} />
         </div>
-        <div className="col-xl-1">
-          <Svg heightForSvg={this.state.height}/>
-        </div>
+        {width >= 1210 ? (
+          <div className="col-xl-1">
+            <Svg heightForSvg={this.state.height} />
+          </div>
+        ) : null}
       </div>
     );
   }

@@ -5,11 +5,12 @@ export default class Scroll extends React.Component {
   componentDidMount = () => {
     $(function() {
       $('a[href^="#"]').on("click", function(event) {
-        event.preventDefault();
         const sc = $(this).attr("href");
-        const dn = $(sc).offset().top;
-
-        $("html, body").animate({ scrollTop: dn }, 1000);
+        if (sc !== "#" && sc.slice(0, 5) !== "#page") {
+          event.preventDefault();
+          const dn = $(sc).offset().top;
+          $("html, body").animate({ scrollTop: dn }, 1000);
+        }
       });
     });
   };

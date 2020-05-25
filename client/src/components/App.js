@@ -15,7 +15,6 @@ import PersonalInfo from "./PersonalInfo";
 import ThisWhatIDo from "./ThisWhatIDo";
 import MyWorks from "./MyWorks";
 import DropMeALine from "./DropMeALine";
-import SvgCard from "./SvgCard";
 import Navigate from "./Navigate";
 import Footer from "./Footer";
 import Title from "./Title";
@@ -42,6 +41,7 @@ class App extends Component {
 
   render() {
     const { t, i18n } = this.props;
+    const { width } = window.screen;
     return (
       <>
         <Helmet>
@@ -66,7 +66,7 @@ class App extends Component {
           <Navigate />
           <section className="container justify-content-center">
             <Title text={t("titles.about")}/>
-            <PersonalInfo t={t} />
+            <PersonalInfo t={t} width={width}/>
             <h2
               id="whatIdo"
               className="container__title wow fadeInUp"
@@ -74,19 +74,19 @@ class App extends Component {
             >
               {t("titles.whatIdo")}
             </h2>
-            <ThisWhatIDo t={t} />
+            <ThisWhatIDo t={t} width={width}/>
             <h2 id="skils" className="container__title wow fadeInUp">
               {t("titles.skils")}
             </h2>
-            <Skils t={t} />
+            <Skils t={t} width={width} />
             <h2 id="works" className="container__title wow fadeInUp">
               {t("titles.myworks")}
             </h2>
-            <MyWorks t={t} />
+            <MyWorks t={t} width={width} />
             <h2 id="contact" className="container__title wow fadeInUp">
               {t("titles.drop")}
             </h2>
-            <DropMeALine t={t} />
+            <DropMeALine t={t} width={width} />
           </section>
         </main>
         <Footer />

@@ -2,7 +2,7 @@
   "header": {
       "welcome_text": "Hello, my name is Nikita Akulich and I am",
       "main": "FRONTEND WEB DEVELOPER",
-      "about": "creating modernd and responsive web aplications."
+      "about": "creating modern and responsive web aplications."
   },
   "titles": {
     "about": "About me",
@@ -32,7 +32,9 @@
     "text1": "Developing web interfaces for sites or web applications.",
     "name2": "Web Programing",
     "text2": "Developing web sites and web applications(UI/UX Design).",
-    "text": "I am a Junior Frontend Developer with enough experience."
+    "text": "I am a Junior Frontend Developer with enough experience.",
+    "text3": "Developing and creating different types of web sites and web applications.",
+    "text4": "Developing and creating web servers for web sites and web applications."
   },
   "form": {
     "name-label": "Name",
@@ -43,5 +45,17 @@
     "message-label": "Message",
     "message-placeholder": "Enter your message",
     "submit": "SEND MESSAGES"
+  },
+  "works": {
+    "allProjects": "All projects",
+    "commercialProjects": "Commercial projects",
+    "ownProjects": "Own projects",
+    "more": {
+      "title": "More about project",
+      "link": "You can visit web site.",
+      "customer": "Customer",
+      "description": "Short description",
+      "stack": "Technology stack"
+    }
   }
 }

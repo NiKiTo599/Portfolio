@@ -1,28 +1,63 @@
 import React from "react";
-import { Modal, Button } from "react-bootstrap";
+import { Modal, Button, Tab, Pagination, ListGroup } from "react-bootstrap";
 
 import json from "../data/works.json";
 
-function MyVerticallyCenteredModal(props) {
-  if (props.data === null) return null;
+function MyVerticallyCenteredModal({ data, t, onHide, show, width }) {
+  if (data === null) return null;
   return (
     <Modal
-      {...props}
-      size="lg"
+      show={show}
+      onHide={onHide}
+      size={width >= 450 ? "lg" : "sm"}
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton>
+      <Modal.Header>
         <Modal.Title id="contained-modal-title-vcenter">
-          More abiut project
+          <p>{t("works.more.title")}</p>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>{props.data.name}</h4>
-        <p>{props.data.name}</p>
+        <div className="more_about_project">
+          <h4>{data.name}</h4>
+          <p>
+            <span>{t("works.more.customer")}:</span>
+            {data.customer}
+          </p>
+          <p>
+            <span>{t("works.more.stack")}:</span>
+            <div className="more_about_project__stack">
+              {data.stack.map((item) => (
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`https://www.google.com/search?q=${item}`}
+                >
+                  <div className="stack__item">
+                    <span>{item}</span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </p>
+          <p className="more_about_project__description">
+            <span>{t("works.more.description")}:</span>
+            {data.description}
+          </p>
+          <a
+            className="more_about_project__link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={data.link}
+          >
+            {t("works.more.link")}
+          </a>
+          <img src={require(`../data/images/works/${data.img}`)} alt="" />
+        </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <Button onClick={onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
   );
@@ -33,13 +68,11 @@ export default class MyWorks extends React.Component {
     works: json.works,
     show: false,
     data: null,
-    animateStyles: [
-      'wow fadeInLeft',
-      'wow fadeInRight'
-    ]
+    animateStyles: ["wow fadeInLeft", "wow fadeInRight"],
+    page: 1,
   };
 
-  changeShowWorks = e => {
+  changeShowWorks = (e) => {
     const { target } = e;
     const { id } = target;
     document
@@ -48,68 +81,99 @@ export default class MyWorks extends React.Component {
     target.classList.toggle("list__item__active");
     if (id === "all") {
       this.setState({
-        works: json.works
+        works: json.works,
       });
     } else if (id === "com") {
       this.setState({
-        works: json.works.filter(i => i.type === "com")
+        works: json.works.filter((i) => i.type === "com"),
       });
     } else {
       this.setState({
-        works: json.works.filter(i => i.type === "own")
+        works: json.works.filter((i) => i.type === "own"),
       });
     }
   };
-  changeShow = e => {
-    console.log(e.target);
+  changeShow = (e) => {
     this.setState({
       show: !this.state.show,
-      data: this.state.works[+e.currentTarget.id]
+      data: e ? this.state.works[+e.currentTarget.id] : null,
     });
   };
 
   render() {
-    console.log(json);
+    const { t, width } = this.props;
+    const pages = Math.ceil(this.state.works.length / 4);
+    const arrayOfPages = new Array(pages).fill(0).map((item, idx) => idx + 1);
     return (
-      <div className="row justify-content-between">
-        <div className="col-xl-12">
-          <ul onClick={this.changeShowWorks} className="my_works__list">
-            <li id="all" className="list__item list__item__active">
-              All projects
-            </li>
-            <li id="com" className="list__item">
-              Commercial projects
-            </li>
-            <li id="own" className="list__item">
-              Own projects
-            </li>
-          </ul>
-        </div>
-        {this.state.works.map((i, index) => {
-          if ((index + 2) % 2 === 0) {
-            this.anim = 0;
-          } else {
-            this.anim = 1;
-          }
-          return (
-            <div
-              id={index}
-              className={`col-xl-6 my_works__item ${this.state.animateStyles[this.anim]}`}
-              onClick={e => this.changeShow(e)}
-            >
-              <img src={require(`../data/images/works/${i.img}`)} alt={i.name} />
-              <h4>{i.name}</h4>
-              <span>{i.date}</span>
+      <>
+        <Tab.Container defaultActiveKey="#page1">
+          <div className="row justify-content-between">
+            <div className="col-xl-12 col-12">
+              <ul onClick={this.changeShowWorks} className="my_works__list">
+                <li id="all" className="list__item list__item__active">
+                  {t("works.allProjects")}
+                </li>
+                <li id="com" className="list__item">
+                  {t("works.commercialProjects")}
+                </li>
+                <li id="own" className="list__item">
+                  {t("works.ownProjects")}
+                </li>
+              </ul>
             </div>
-          )
-        })}
-
-        <MyVerticallyCenteredModal
-          show={this.state.show}
-          onHide={e => this.changeShow(e)}
-          data={this.state.data}
-        />
-      </div>
+            <Tab.Content>
+              {// We will take only 4 works for one Tab Pane
+              arrayOfPages.map((item) => (
+                <>
+                  <Tab.Pane eventKey={`#page${item}`}>
+                    <div className="works__container">
+                      {this.state.works
+                        .slice(item * 4 - 4, 4 * item)
+                        .map((i, index) => {
+                          if ((index + 2) % 2 === 0) {
+                            this.anim = 0;
+                          } else {
+                            this.anim = 1;
+                          }
+                          return (
+                            <div
+                              id={index}
+                              className={`my_works__item ${
+                                this.state.animateStyles[this.anim]
+                              }`}
+                              onClick={(e) => this.changeShow(e)}
+                            >
+                              <img
+                                src={require(`../data/images/works/${i.img}`)}
+                                alt={i.name}
+                              />
+                              <h4>{i.name}</h4>
+                              <span>{i.date}</span>
+                            </div>
+                          );
+                        })}
+                    </div>
+                  </Tab.Pane>
+                </>
+              ))}
+            </Tab.Content>
+            <MyVerticallyCenteredModal
+              show={this.state.show}
+              onHide={(e) => this.changeShow(e)}
+              data={this.state.data}
+              t={t}
+              width={width}
+            />
+          </div>
+          <ListGroup>
+            {arrayOfPages.map((pg) => (
+              <ListGroup.Item action href={`#page${pg}`}>
+                {pg}
+              </ListGroup.Item>
+            ))}
+          </ListGroup>
+        </Tab.Container>
+      </>
     );
   }
 }
