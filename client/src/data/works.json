@@ -2,15 +2,53 @@
   "works": [
     {
       "type": "com",
+      "name": "Online store",
+      "date": "February, 2020",
+      "img": "Store.png",
+      "link": "https://lit-reef-56590.herokuapp.com/home",
+      "repository": "https://github.com/NiKiTo599/Store",
+      "customer": "",
+      "stack": [
+        "React",
+        "Redux",
+        "Bootstrap",
+        "Express",
+        "Apollo-client",
+        "SASS",
+        "Svg-icons",
+        "GraphQL",
+        "PostCSS",
+        "MongoDB"
+      ],
+      "description": [
+        "store",
+        {
+          "link": "https://lit-reef-56590.herokuapp.com/home?query=5e2855a6c8d0592360407000&page=1&selection=false",
+          "text": "store"
+        },
+        "store"
+      ]
+    },
+    {
+      "type": "com",
       "name": "SpecStroy298",
       "date": "September, 2019",
       "img": "SpecStroy298.png",
       "link": "http://s-stroy298.com",
+      "repository": "https://github.com/NiKiTo599/Project_Spec_Stroy",
       "customer": "ООО СпецСтрой298",
       "stack": [
-        "Gatsby", "React", "Bootstrap", "Express", "NodeMailer", "SASS"
+        "Gatsby",
+        "React",
+        "Bootstrap",
+        "Express",
+        "NodeMailer",
+        "SASS"
       ],
-      "description": "It's wweb site for russian build company. It was neened some pages and for it I used Gatsby.js. On this project I finished learn this technology. Also I had to create a simple server for sending email with a heilp of NodeMailer API. So it was my first commercial project. I was known a lot of different things which important for my work by this project."
+      "description": [
+        "build",
+        "build"
+      ]
     },
     {
       "type": "own",
@@ -18,11 +56,18 @@
       "date": "August, 2019",
       "img": "CulturePortal.png",
       "link": "https://naughty-bassi-c86f12.netlify.com/ru/",
+      "repository": "https://github.com/NiKiTo599/CULTURE_PORTAl",
       "customer": "Rolling Scopes School",
       "stack": [
-        "Gatsby", "React", "Bootstrap", "SASS"
+        "Gatsby",
+        "React",
+        "Bootstrap",
+        "SASS"
       ],
-      "description": ""
+      "description": [
+        "portal",
+        "portal"
+      ]
     },
     {
       "type": "own",
@@ -30,23 +75,33 @@
       "date": "June, 2019",
       "img": "PiskelClone.png",
       "link": "https://nikito599.github.io/piskel-clone/",
+      "repository": "",
       "customer": "Rolling Scopes School",
       "stack": [
         "Vanil javascript"
       ],
-      "description": ""
+      "description": [
+        "piskel",
+        "piskel"
+      ]
     },
     {
       "type": "own",
       "name": "Calculator",
       "date": "October, 2019",
       "img": "Calculator.png",
-      "link": "https://nikito599.github.io/piskel-clone/",
+      "link": "https://nikito599.github.io/Calculator/",
+      "repository": "https://github.com/NiKiTo599/Calculator",
       "customer": "FreeCodeCamp.org",
       "stack": [
-        "React", "Bootstrap", "Jquery"
+        "React",
+        "Bootstrap",
+        "Jquery"
       ],
-      "description": ""
+      "description": [
+        "calculator",
+        "calculator"
+      ]
     },
     {
       "type": "own",
@@ -54,11 +109,17 @@
       "date": "October, 2019",
       "img": "MarkdownPreviver.png",
       "link": "https://nikito599.github.io/markdownPreviewer/",
+      "repository": "https://github.com/NiKiTo599/markdownPreviewer",
       "customer": "FreeCodeCamp.org",
       "stack": [
-        "React", "Bootstrap", "Jquery"
+        "React",
+        "Bootstrap",
+        "Jquery"
       ],
-      "description": ""
+      "description": [
+        "calculator",
+        "calculator"
+      ]
     }
   ]
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import Svg from "./Svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,6 +6,7 @@ import {
   faLinkedin,
   faTelegram,
 } from "@fortawesome/free-brands-svg-icons";
+import ButtonsPersonal from "./personal/Buttons";
 //
 
 export default class PersonalInfo extends React.Component {
@@ -64,31 +64,7 @@ export default class PersonalInfo extends React.Component {
                 </div>
               </li>
             </ul>
-            <div className="left__buttons">
-              <a href="#contact">
-                <Button
-                  className="heartBeat wow"
-                  data-wow-delay="0.5s"
-                  variant="primary"
-                >
-                  {t("personal.contactme")}
-                </Button>
-              </a>
-
-              <a
-                href="https://yadi.sk/i/LlzssIwoKX934g"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <Button
-                  className="heartBeat wow"
-                  data-wow-delay="0.5s"
-                  variant="secondary"
-                >
-                  {t("personal.download")}
-                </Button>
-              </a>
-            </div>
+            <ButtonsPersonal t={t} width={width} />
           </div>
           <div className="container-personal__right fadeIn wow">
             <img

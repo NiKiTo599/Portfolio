@@ -12,9 +12,11 @@
     "mime": "^2.4.4",
     "mine": "^0.1.0",
     "nodemailer": "^6.3.1",
+    "react-medium-zoom": "^1.0.0",
     "react-native-doc-preview": "^0.2.0"
   },
   "devDependencies": {
-    "concurrently": "^4.0.1"
+    "concurrently": "^4.0.1",
+    "precss": "^4.0.0"
   }
 }

@@ -25,7 +25,7 @@ export default class Skils extends React.Component {
           </div>
         ) : null}
         <div className="col-xl-10 col-lg-12 skils-container">
-          <Items t={t} />
+          <Items t={t} width={width} />
         </div>
         {width >= 1210 ? (
           <div className="col-xl-1">

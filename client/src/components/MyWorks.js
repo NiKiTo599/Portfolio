@@ -1,68 +1,8 @@
 import React from "react";
-import { Modal, Button, Tab, Pagination, ListGroup } from "react-bootstrap";
+import { Tab, ListGroup } from "react-bootstrap";
 
 import json from "../data/works.json";
-
-function MyVerticallyCenteredModal({ data, t, onHide, show, width }) {
-  if (data === null) return null;
-  return (
-    <Modal
-      show={show}
-      onHide={onHide}
-      size={width >= 450 ? "lg" : "sm"}
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header>
-        <Modal.Title id="contained-modal-title-vcenter">
-          <p>{t("works.more.title")}</p>
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <div className="more_about_project">
-          <h4>{data.name}</h4>
-          <p>
-            <span>{t("works.more.customer")}:</span>
-            {data.customer}
-          </p>
-          <p>
-            <span>{t("works.more.stack")}:</span>
-            <div className="more_about_project__stack">
-              {data.stack.map((item) => (
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={`https://www.google.com/search?q=${item}`}
-                >
-                  <div className="stack__item">
-                    <span>{item}</span>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </p>
-          <p className="more_about_project__description">
-            <span>{t("works.more.description")}:</span>
-            {data.description}
-          </p>
-          <a
-            className="more_about_project__link"
-            target="_blank"
-            rel="noopener noreferrer"
-            href={data.link}
-          >
-            {t("works.more.link")}
-          </a>
-          <img src={require(`../data/images/works/${data.img}`)} alt="" />
-        </div>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={onHide}>Close</Button>
-      </Modal.Footer>
-    </Modal>
-  );
-}
-
+import ModalWorks from "./Works/ModalWorks";
 export default class MyWorks extends React.Component {
   state = {
     works: json.works,
@@ -157,7 +97,7 @@ export default class MyWorks extends React.Component {
                 </>
               ))}
             </Tab.Content>
-            <MyVerticallyCenteredModal
+            <ModalWorks
               show={this.state.show}
               onHide={(e) => this.changeShow(e)}
               data={this.state.data}

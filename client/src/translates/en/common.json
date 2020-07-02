@@ -12,7 +12,7 @@
     "drop": "Drop me a line"
   },
   "skils": {
-    "text": "I am inspired by creating great work with people who are as passionate as I am about building something awesome.",
+    "text": "I'm inspired by the continuous development and professional growth, I'm always learning new skills and perfection of old.",
     "text1": "HTML, CSS, SASS, React, Bootstrap, Gatsby.js,",
     "text2": "Photoshop, Illustrator, XMind, Prototyping, Wireframing, User Research, Usability Testing.",
     "text3": "Screaming Frog, Google Analytics, CrazyEgg.",
@@ -23,7 +23,7 @@
     "phone": "Phone",
     "social": "Social",
     "adress_label": "Adress",
-    "adress": "Belarus, Minsk, Kedishko street 10A",
+    "adress": "Belarus, Minsk, Kedishko street, 10A",
     "contactme": "contact me",
     "download": "download CV"
   },
@@ -55,7 +55,34 @@
       "link": "You can visit web site.",
       "customer": "Customer",
       "description": "Short description",
-      "stack": "Technology stack"
+      "stack": "Technology stack",
+      "description_text": {
+        "store": {
+          "1": "In this project I should develop online store. For some objective reasons I didn't finish it, but you can estimate that has been done by me. As database is not full, ypu can see only one category of goods.",
+          "2": "Go to this category.",
+          "3": "Frontend was written in React with Redux, Backend in Express, MongoDB is used for data storage. Also for convenient data request from server I used GraphQL. I want to finish it in the future."
+        },
+        "build": {
+          "1": "It's web site for build company. It was neened some pages and for it I used React with Gatsby.js. Also I had to create a simple server in Express for sending email with a help of NodeMailer API.",
+          "2": "So it was my first commercial project as a freelancer. I had known a lot of different things which important for my work by this project."
+        },
+        "portal": {
+          "1": "This project was created as part of training at the Rolling Scopes school. This is a portal about Belarusian theater directors, with corresponding pages. I also accept pull requests at the GitHub. This is my first group project.",
+          "2": "Many different libraries were used in this project, such as Gatsby, i18next, etc. You can visit the project repository and see."
+        },
+        "piskel": {
+          "1": "This is a coursework project at Rolling Scopes School. It was necessary to create a clone of the Piskel web application, this application for creating animated frames on canvas.",
+          "2": "This project had to be written in native JavaScript, without using any libraries."
+        },
+        "calculator": {
+          "1": "Project on the platform FreeCodeCamp.",
+          "2": "This project had to be written in native JavaScript, without using any libraries."
+        },
+        "markdown": {
+          "1": "Project on the platform FreeCodeCamp.",
+          "2": "This project had to be written in native JavaScript, without using any libraries."
+        }
+      }
     }
   }
 }

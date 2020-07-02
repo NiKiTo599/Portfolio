@@ -32,7 +32,6 @@ app.get("/api/download", (req, res) => {
 });
 
 app.post("/api/world", (req, res) => {
-  console.log(req.body);
   nodemailer.createTestAccount((err, acount) => {
     /* let transporter = nodemailer
       .createTransport('smtps://akulichnikita0@gmail.com:Nik35985@smtp.gmail.com/?pool=true'); */
