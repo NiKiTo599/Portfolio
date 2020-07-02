@@ -11,7 +11,7 @@ const ButtonsPersonal = ({t, width}) => (
         {width > 768 ? t("personal.contactme") : <FontAwesomeIcon icon={faMobile} />}
       </Button>
     </a>
-    <Download file="Navigate.js" content="# hello">
+    <Download file="../../data/resume.pdf" content="# Resume">
       <Button
         className="heartBeat wow"
         data-wow-delay="0.5s"
