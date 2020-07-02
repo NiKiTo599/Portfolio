@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.27769039.chunk.css",
+    "main.js": "/static/js/main.5bcc93a8.chunk.js",
+    "main.js.map": "/static/js/main.5bcc93a8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e5fc83a6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e5fc83a6.js.map",
+    "static/css/2.89fcc9a3.chunk.css": "/static/css/2.89fcc9a3.chunk.css",
+    "static/js/2.43af072d.chunk.js": "/static/js/2.43af072d.chunk.js",
+    "static/js/2.43af072d.chunk.js.map": "/static/js/2.43af072d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.9fd050e8677aa6ff1c1cc24d900bfb57.js": "/precache-manifest.9fd050e8677aa6ff1c1cc24d900bfb57.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.89fcc9a3.chunk.css.map": "/static/css/2.89fcc9a3.chunk.css.map",
+    "static/css/main.27769039.chunk.css.map": "/static/css/main.27769039.chunk.css.map",
+    "static/js/2.43af072d.chunk.js.LICENSE.txt": "/static/js/2.43af072d.chunk.js.LICENSE.txt",
+    "static/media/Calculator.png": "/static/media/Calculator.e748d38d.png",
+    "static/media/CulturePortal.png": "/static/media/CulturePortal.45dd5303.png",
+    "static/media/MarkdownPreviver.png": "/static/media/MarkdownPreviver.c448333c.png",
+    "static/media/PiskelClone.png": "/static/media/PiskelClone.d3248ef2.png",
+    "static/media/SpecStroy298.png": "/static/media/SpecStroy298.95fd0bb7.png",
+    "static/media/Store.png": "/static/media/Store.339617bc.png",
+    "static/media/foto1.JPG": "/static/media/foto1.3f203605.JPG",
+    "static/media/style.scss": "/static/media/main_fon.859f21eb.png",
+    "static/media/slick-theme.css": "/static/media/slick.f97e3bbf.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e5fc83a6.js",
+    "static/css/2.89fcc9a3.chunk.css",
+    "static/js/2.43af072d.chunk.js",
+    "static/css/main.27769039.chunk.css",
+    "static/js/main.5bcc93a8.chunk.js"
+  ]
+}
