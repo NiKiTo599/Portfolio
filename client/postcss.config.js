@@ -1,6 +1,6 @@
 module.exports = {
-  parser: 'postcss-scss',
   pligins: [
+    require('postcss-import'),
     require("postcss-nested"),
     require("autoprefixer"),
   ],

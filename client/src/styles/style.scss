@@ -206,6 +206,8 @@ body {
   bottom: 80%;
   left: 90%;
   z-index: 2000;
+  display: flex;
+  flex-flow: row wrap;
   @media screen and (max-width: 1440px) {
     left: 80%;
   }
@@ -213,6 +215,9 @@ body {
     left: 75%;
   }
   .container-change_language__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 3rem;
     height: 3rem;
     background-color: rgba(124, 121, 121, 0.432);
